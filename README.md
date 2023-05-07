@@ -13,7 +13,7 @@ LOCATION = "Ballroom" | "Billiard Room" | "Conservatory" | "Dining Room" | "Hall
 
 CHOOSE_SUSPECT = IDENTIFIER, "is", SUSPECT, "\n"
 
-DEFINE_CRIME = "The murder was done by", SUSPECT, "with a", WEAPON, "in the", LOCATION, "\n"
+DEFINE_CRIME = "The murder was done by", SUSPECT, "\n", "The crime weapon is a", WEAPON, "\n", "The crime location is the", LOCATION, "\n"
 
 ACCUSATION = IDENTIFIER, "accuses", SUSPECT, "in the", LOCATION, "with a", WEAPON, "\n"
 
@@ -36,10 +36,12 @@ player_2 is Reverend Green
 player_3 is Miss Scarlett
 player_4 is Mrs. Peacock
 
-The murder was done by Reverend Green with a Revolver in the Lounge
+The murder was done by Reverend Green
+The crime weapon is a Revolver
+The crime location is the Lounge
 
 While the crime is not solved 
-player_1 accuses Miss Scarlet in the Ballroom with a Candlestick
+player_1 accuses Miss Scarlett in the Ballroom with a Candlestick
 player_2 accuses Reverend Green in the Lounge with a Revolver
 The crime has been solved
 
