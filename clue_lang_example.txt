@@ -1,0 +1,13 @@
+There has been a murder at Tudor Mansion
+player_1 is Colonel Mustard
+player_2 is Reverend Green
+player_3 is Miss Scarlett
+player_4 is Mrs. Peacock
+The murder was done by Reverend Green
+The crime weapon is a Revolver
+The crime location is the Lounge
+While the crime is not solved 
+player_1 accuses Miss Scarlett in the Ballroom with a Candlestick
+player_2 accuses Reverend Green in the Lounge with a Revolver
+The crime has been solved
+Reverend Green is arrested for murder
