@@ -46,7 +46,6 @@ IDENTIFIER = { LETTER | DIGIT }
 walk 3 steps
 turn 90 degrees to the left
 walk 2 steps forward
-
 pick box
 
 x = 3
@@ -60,6 +59,8 @@ stop
 
 if holding box:
   drop box
+else:
+  pick box
 stop
 
 action square(x, y):
@@ -70,5 +71,4 @@ action square(x, y):
  stop
  
  do square
-
 ```
