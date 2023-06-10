@@ -1,21 +1,19 @@
 walk 3 steps
 turn 90 degrees to the left
-walk 2 steps forward
+walk 2 steps
 pick box
 
-x = 3
-
-repeat x times:
+repeat 3 times:
   turn 90 degrees to the right
   walk 2 steps
   turn 90 degrees to the right
   walk 5 steps
 stop
 
-if holding box:
-  drop box
-else:
+if !holding box:
   pick box
+else:
+  drop box
 stop
 
 action square(x, y):
@@ -23,6 +21,6 @@ action square(x, y):
     walk y steps
     turn 90 degrees to the left
    stop
- stop
+  stop
  
- do square
+do square(3, 2)

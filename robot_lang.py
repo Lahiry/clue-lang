@@ -1,6 +1,6 @@
 import sys
-from clue_lang_lexer import Lexer
-from clue_lang_parser import Parser
+from robot_lang_lexer import Lexer
+from robot_lang_parser import Parser
 
 lexer = Lexer().get_lexer()
 tokens = lexer.lex((" ").join(open(sys.argv[1], 'r')))
