@@ -1,41 +1,41 @@
 # Robot-Lang 🤖
 
-### * Apresentação da linguagem disponível no arquivo `(Robot-Lang - Apresentacao.pptx)`
+### *OBS:* Apresentação da linguagem disponível no arquivo `(Robot-Lang - Apresentacao.pdf)`
 
 ## EBNF
 
 ```python
- INSTRUCTIONS = { TASK } 
+INSTRUCTIONS = { TASK } 
  
- TASK = { WALK | TURN | PICK | DROP | REPEAT | (IF | IF, ELSE) | ACTION | DO } 
+TASK = { WALK | TURN | PICK | DROP | REPEAT | (IF | IF, ELSE) | ACTION | DO } 
   
- WALK = "walk", ({ DIGIT } | IDENTIFIER), "steps", "\n"
+WALK = "walk", ({ DIGIT } | IDENTIFIER), "steps", "\n"
  
- TURN = "turn", ({ DIGIT } | IDENTIFIER), "degrees to the", { ORIENTATION }, "\n"
+TURN = "turn", ({ DIGIT } | IDENTIFIER), "degrees to the", { ORIENTATION }, "\n"
  
- ORIENTATION = "left" | "right"
+ORIENTATION = "left" | "right"
  
- PICK = "pick", IDENTIFIER, "\n"
+PICK = "pick", IDENTIFIER, "\n"
  
- DROP = "drop", IDENTIFIER, "\n"
+DROP = "drop", IDENTIFIER, "\n"
  
- REPEAT = "repeat", ({ DIGIT } | IDENTIFIER), "times:", "\n", INSTRUCTIONS, STOP, "\n"
+REPEAT = "repeat", ({ DIGIT } | IDENTIFIER), "times:", "\n", INSTRUCTIONS, STOP, "\n"
  
- IF = "if", CONDITIONAL, ":", "\n", INSTRUCTIONS, STOP, "\n"
+IF = "if", CONDITIONAL, ":", "\n", INSTRUCTIONS, STOP, "\n"
  
- ELSE = "else", ":", "\n", INSTRUCTIONS, STOP, "\n"
+ELSE = "else", ":", "\n", INSTRUCTIONS, STOP, "\n"
  
- CONDITIONAL = ("holding" | NOT, "holding"), IDENTIFIER
+CONDITIONAL = ("holding" | NOT, "holding"), IDENTIFIER
  
- ACTION = "action", IDENTIFIER, "(", PARAMETERS, ")", ":", "\n", INSTRUCTIONS, STOP, "\n"
+ACTION = "action", IDENTIFIER, "(", PARAMETERS, ")", ":", "\n", INSTRUCTIONS, STOP, "\n"
   
- PARAMETERS = [ identifier { ",", identifier } ]
+PARAMETERS = [ identifier { ",", identifier } ]
  
- DO = "do", IDENTIFIER, "\n"
+DO = "do", IDENTIFIER, "\n"
  
- STOP = "stop"
+STOP = "stop"
  
- NOT = "!"
+NOT = "!"
 
 LETTER = ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z")
 
@@ -73,4 +73,40 @@ action square(x, y):
 stop
  
 do square(3, 2)
+```
+
+### Output 
+
+```lua
+Walking 3 steps
+Turning 90 degrees to the left
+Walking 2 steps
+Picking box
+Turning 90 degrees to the right
+Walking 2 steps
+Turning 90 degrees to the right
+Walking 5 steps
+Turning 90 degrees to the right
+Walking 2 steps
+Turning 90 degrees to the right
+Walking 5 steps
+Turning 90 degrees to the right
+Walking 2 steps
+Turning 90 degrees to the right
+Walking 5 steps
+Droping box
+Walking 2 steps
+Turning 90 degrees to the left
+Walking 2 steps
+Turning 90 degrees to the left
+Walking 2 steps
+Turning 90 degrees to the left
+```
+
+## Para compilar
+
+* dentro da pasta `robot-lang-compiler`
+
+```lua
+python .\main.py <robot_lang_script_file>
 ```
