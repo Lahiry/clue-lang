@@ -1,4 +1,6 @@
-# Robot Lang 🤖
+# Robot-Lang 🤖
+
+### * Apresentação da linguagem disponível no arquivo `(Robot-Lang - Apresentacao.pptx)`
 
 ## EBNF
 
@@ -67,8 +69,8 @@ action square(x, y):
   repeat x times:
     walk y steps
     turn 90 degrees to the left
-   stop
   stop
+stop
  
 do square(3, 2)
 ```
