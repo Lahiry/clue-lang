@@ -31,7 +31,9 @@ ACTION = "action", IDENTIFIER, "(", PARAMETERS, ")", ":", "\n", INSTRUCTIONS, ST
   
 PARAMETERS = [ identifier { ",", identifier } ]
  
-DO = "do", IDENTIFIER, "\n"
+DO = "do", IDENTIFIER, "(", NUMBERS, ")", "\n"
+
+NUMBERS = [ { DIGIT } { ",", { DIGIT } } ]
  
 STOP = "stop"
  
